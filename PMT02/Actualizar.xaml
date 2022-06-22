@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMT02.Actualizar"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False" >
+    
+    <StackLayout BackgroundColor="#222124">
+        <Label Text="Actualizar Datos"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="#ECEAE4"
+               Margin="0,10" />
+        <Frame BackgroundColor="#ECEAE4"
+               VerticalOptions="FillAndExpand"
+               Margin="20,0,20,10"
+               CornerRadius="20"
+               HasShadow="False">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="10">
+                <Image Source="https://i.ibb.co/t4KWm3z/actualizar-pagina.png "
+                       WidthRequest="110" />
+                <Entry x:Name="txtIddatos"
+                       Text="{Binding idp}"
+                       Placeholder="Id"
+                       Keyboard="Chat"
+                       BackgroundColor="#ECEAE4"
+                       PlaceholderColor="#6D6D6B"
+                       TextColor="#222124" />
+                <Entry Text="{Binding Nombrep}"
+                       Keyboard="Chat"
+                       Placeholder="Nombre"
+                       BackgroundColor="#ECEAE4"
+                
+                       TextColor="#222124"
+                       x:Name="txtnombre" />
+                <Entry Placeholder="Edad"
+                       Text="{Binding Edadp}"
+                       Keyboard="Numeric"
+                       BackgroundColor="#ECEAE4"
+                       PlaceholderColor="#6D6D6B"
+                       TextColor="#222124"
+                       x:Name="txtedad" />
+                <DatePicker BackgroundColor="#ECEAE4"
+                            TextColor="#222124"
+                            x:Name="txtfecha"
+                            Date="{Binding fecha}" />
+                <Entry Placeholder="Direccion"
+                       Text="{Binding Direccionp}"
+                       Keyboard="Chat"
+                       BackgroundColor="#ECEAE4"
+                       PlaceholderColor="#6D6D6B"
+                       TextColor="#222124"
+                       x:Name="txtDireccion" />
+                <Picker x:Name="picker"
+                        SelectedItem="{Binding Sexop}"
+                        Title="Seleccionar Sexo"
+                        TextColor="Black"
+                        TitleColor="#6D6D6B"
+                        BackgroundColor="#ECEAE4">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Masculino</x:String>
+                            <x:String>Femenino</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <Button x:Name="btnActualizar"
+                        Text="Actualizar"
+                        Clicked="btnActualizar_Clicked"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        FontAttributes="Bold" 
+                        Margin="0,20,0,0"/>
+                
+                <Button x:Name="btnEliminar"
+                        Text="Eliminar"
+                        Clicked="btnEliminar_Clicked"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        FontAttributes="Bold"
+                        Margin="0,0,0,0" />
+                
+                <Button Text="Volver"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        x:Name="btnvolver"
+                        Clicked="btnvolver_Clicked"
+                        FontAttributes="Bold" />
+               
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

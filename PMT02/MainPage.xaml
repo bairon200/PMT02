@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMT02.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <StackLayout BackgroundColor="#222124">
+        
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="20,10,20,10"
+               CornerRadius="20"
+               HasShadow="False"
+               BackgroundColor="#ECEAE4">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="10">
+                <Label Text="Bienvenido"
+                       TextColor="#222124"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="60" />
+              
+                <Label Text="Tarea#2 SQLite"
+                       TextColor="#222124"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="20" />
+                
+                <Image Source="https://i.ibb.co/6FS4SND/libro.png" />
+                
+                <Button Text="Iniciar"
+                        TextTransform="None"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        x:Name="btniniciar"
+                        Clicked="btniniciar_Clicked"
+                        Margin="0,40"/>
+            </StackLayout>
+            
+        </Frame>
+    </StackLayout>
+
+   
+
+</ContentPage>

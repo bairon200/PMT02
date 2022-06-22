@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMT02.ListaPersonas"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    
+    <StackLayout BackgroundColor="#222124">
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="20,10,20,10"
+               CornerRadius="20"
+               HasShadow="False"
+               BackgroundColor="#ECEAE4">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="10">
+                <Label Text="Lista de Personas"
+                       TextColor="#222124"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       Margin="0,0,0,20" />
+                <ListView x:Name="listadatos" 
+                          ItemSelected="listadatos_ItemSelected"
+                          SeparatorColor="Transparent"
+                          SelectionMode="Single"
+                          InputTransparent="False"   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding id}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           TextColor="Blue"
+                                           />
+                                    <Label Text="{Binding Nombre}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           TextColor="Gray" />
+                                    <Label Text="{Binding Edad}"
+                                           Grid.Row="0"
+                                           Grid.Column="2"
+                                           TextColor="Gray" />
+                                    
+                                    <Label Text="{Binding Sexo}"
+                                           Grid.Row="0"
+                                           Grid.Column="3"
+                                           TextColor="Gray" />
+                                    
+                                    <Label Text="{Binding Fecha}"
+                                           Grid.Row="0"
+                                           Grid.Column="4"
+                                           TextColor="Gray"
+                                           x:Name="fechalist" />
+                                    <Label Text="{Binding Direccion}"
+                                           Grid.Row="1"
+                                           Grid.ColumnSpan="6"
+                                           TextColor="Orange" />
+                                   
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Volver"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        x:Name="btnvolver"
+                        Clicked="btnvolver_Clicked"
+                        FontAttributes="Bold" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

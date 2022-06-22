@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMT02.datos"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+   
+        <StackLayout BackgroundColor="#222124">
+            <Label Text="Datos Personales"
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="#ECEAE4"
+                   Margin="0,10" />
+            <Frame BackgroundColor="#ECEAE4"
+                   VerticalOptions="FillAndExpand"
+                   Margin="20,0,20,10"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <StackLayout VerticalOptions="Center"
+                             Spacing="10">
+                  
+                    <Image Source="https://i.ibb.co/PTXCysH/datos-del-usuario.png " WidthRequest="160"/>
+                    <Entry x:Name="txtIddatos"
+                           IsVisible="False"
+                           Keyboard="Chat"
+                           BackgroundColor="#ECEAE4"
+                           PlaceholderColor="#6D6D6B"
+                           TextColor="#222124" />
+                    <Entry Placeholder="Nombre"
+                           Keyboard="Chat"
+                           BackgroundColor="#ECEAE4"
+                           PlaceholderColor="#6D6D6B"
+                           TextColor="#222124"
+                           x:Name="txtnombre" />
+                    <Entry Placeholder="Edad"
+                           Keyboard="Numeric"
+                           BackgroundColor="#ECEAE4"
+                           PlaceholderColor="#6D6D6B"
+                           TextColor="#222124"
+                           x:Name="txtedad" />
+                    <DatePicker BackgroundColor="#ECEAE4"
+                                TextColor="#222124"
+                                x:Name="txtfecha" />
+                    <Entry Placeholder="Direccion"
+                           Keyboard="Chat"
+                           BackgroundColor="#ECEAE4"
+                           PlaceholderColor="#6D6D6B"
+                           TextColor="#222124"
+                           x:Name="txtDireccion" />
+                <Picker x:Name="picker"
+                        Title="Seleccionar Sexo"
+                        TextColor="Black"
+                        TitleColor="#6D6D6B"
+                        BackgroundColor="#ECEAE4">
+                    <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Masculino</x:String>
+                        <x:String>Femenino</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                </Picker>
+                <Button x:Name="btnActualizar"
+                            Text="Actualizar"
+                            Clicked="btnActualizar_Clicked"
+                            IsVisible="False" />
+                    <Button Text="Guardar"
+                            CornerRadius="30"
+                            BackgroundColor="#222124"
+                            Margin="0,20,0,0"
+                            TextColor="#ECEAE4"
+                            FontAttributes="Bold"
+                            x:Name="btnguardar"
+                            Clicked="btnguardar_Clicked" />
+                    <Button Text="Volver"
+                            CornerRadius="30"
+                            BackgroundColor="#222124"
+                            TextColor="#ECEAE4"
+                            x:Name="btnvolver"
+                            Clicked="btnvolver_Clicked"
+                            FontAttributes="Bold" />
+                    <Button Text="Ver Lista"
+                            CornerRadius="30"
+                            BackgroundColor="#222124"
+                            TextColor="#ECEAE4"
+                            x:Name="btnlista"
+                            Clicked="btnlista_Clicked"
+                            FontAttributes="Bold" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    
+   
+</ContentPage>
